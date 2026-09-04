@@ -30,8 +30,8 @@ int main() {
 #define stack_clear(s)		( { (s).n = 0; } )
 #define stack_delete(s) 	( { free((s).a); (s).a = NULL; } )
 #define stack_peek(s) 		( ((s).n > 0) ? ((s).a[(s).n-1]) : (0) )
-#define stack_pop(s) 		( (s).n > 0 ? (s).a[--(s).n] : (0) )
-#define stack_ptr(s)		( (s).a )
+#define stack_pop(s) 		  ( (s).n > 0 ? (s).a[--(s).n] : (0) )
+#define stack_ptr(s)		  ( (s).a )
 #define stack_size(s) 		( (s).n )
 
 #define stack_push(s, x) do {								          \
