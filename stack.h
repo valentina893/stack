@@ -39,7 +39,7 @@ int main() {
 			(s).m = (s).m * 2;								              \
 			(s).a = realloc((s).a, sizeof(*(s).a) * (s).m);	\
 		}													                        \
-		(s).a[(s).n++] = (x);								               \
+		(s).a[(s).n++] = (x);								              \
 	} while (0)
 
 #endif
