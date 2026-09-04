@@ -34,12 +34,12 @@ int main() {
 #define stack_ptr(s)		( (s).a )
 #define stack_size(s) 		( (s).n )
 
-#define stack_push(s, x) do {								\
-		if ((s).n == (s).m) {								\
-			(s).m = (s).m * 2;								\
+#define stack_push(s, x) do {								          \
+		if ((s).n == (s).m) {								              \
+			(s).m = (s).m * 2;								              \
 			(s).a = realloc((s).a, sizeof(*(s).a) * (s).m);	\
-		}													\
-		(s).a[(s).n++] = (x);								\
+		}													                        \
+		(s).a[(s).n++] = (x);								               \
 	} while (0)
 
 #endif
