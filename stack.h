@@ -7,9 +7,9 @@ created 9/4/26 by Valentina Susarret
 example:
 
 #include "stack.h"
+stack_t(int);
 int main() {
-  stack_t(int) s;
-  stack_init(s);
+  int_stack s;
   stack_push(s, 3);
   int top = stack_peek(s);
   int pop = stack_pop(s);
@@ -25,7 +25,7 @@ int main() {
 
 #define STACK_INIT_SIZE 	( 256 )
 
-#define stack_t(type) 		struct { uint64_t n, m; type *a; }
+#define stack_t(type) 		typedef struct { uint64_t n, m; type *a; } type##_stack;
 #define stack_init(s) 		( { (s).n = 0; (s).m = (STACK_INIT_SIZE); (s).a = calloc((s).m, sizeof(*(s).a)); (s); } )
 #define stack_clear(s)		( { (s).n = 0; } )
 #define stack_delete(s) 	( { free((s).a); (s).a = NULL; } )
