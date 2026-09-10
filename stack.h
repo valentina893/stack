@@ -191,9 +191,6 @@ void
 STACK_delete(STACK_NAME *s) { free(s->data); s->data = NULL; }
 #endif
 
-// Cleanup
-// These need to be undef'ed so they can be redefined the
-// next time you need to instantiate this template.
 #undef STACK_T
 #undef STACK_PREFIX
 #undef STACK_NAME
