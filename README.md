@@ -1,5 +1,5 @@
 # stack
 
-A simple, header-only stack class for any data type.
+A Header-only stack class for any data type.
 
-This implementation is inspired by [kvec.h](https://github.com/ocxtal/kvec.h).
+This implementation is inspired by [*Templates in C*](https://www.davidpriver.com/ctemplates.html) by David Priver.
